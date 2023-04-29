@@ -93,9 +93,6 @@ resource "aws_s3_bucket" "six" {
   bucket = "rahamshai77889900"
 }
 
-resource "aws_iam_user" "seven" {
-name = "ben10" 
-}
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "us-east-1b"
