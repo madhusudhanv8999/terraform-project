@@ -94,7 +94,7 @@ resource "aws_s3_bucket" "six" {
 }
 
 resource "aws_iam_user" "seven" {
-name = "rahamuser11420" 
+name = "ben10" 
 }
 
 resource "aws_ebs_volume" "eight" {
