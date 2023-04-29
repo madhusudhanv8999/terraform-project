@@ -1,16 +1,16 @@
 #this file consists of code for instances and sg
 provider "aws" {
-region = "ap-south-1"
-access_key = "AKIAWLAREJ3GMCJ6SOPY"
-secret_key = "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"
+region = "us-east-1"
+access_key = "AKIASUU6XVLWRFIXKN7V"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
   ami             = "ami-0d81306eddc614a45"
   instance_type   = "t2.micro"
-  key_name        = "rrraham"
+  key_name        = "jlk"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1a"
+  availability_zone = "us-east-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -27,9 +27,9 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-0d81306eddc614a45"
   instance_type   = "t2.micro"
-  key_name        = "rrraham"
+  key_name        = "jlk"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -46,9 +46,9 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-0d81306eddc614a45"
   instance_type   = "t2.micro"
-  key_name        = "rrraham"
+  key_name        = "jlk"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "app-server-1"
   }
@@ -57,9 +57,9 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-0d81306eddc614a45"
   instance_type   = "t2.micro"
-  key_name        = "rrraham"
+  key_name        = "jlk"
   vpc_security_group_ids = [aws_security_group.five.id]
-  availability_zone = "ap-south-1b"
+  availability_zone = "us-east-1b"
   tags = {
     Name = "app-server-2"
   }
@@ -90,15 +90,15 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "rahamshaikterra77889900"
+  bucket = "rahamshai77889900"
 }
 
 resource "aws_iam_user" "seven" {
-name = "rahamuser11" 
+name = "rahamuser11420" 
 }
 
 resource "aws_ebs_volume" "eight" {
- availability_zone = "ap-south-1b"
+ availability_zone = "us-east-1b"
   size = 40
   tags = {
     Name = "ebs-001"
