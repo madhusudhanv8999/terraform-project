@@ -90,11 +90,11 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "rahamshaikterra77889900"
+  bucket = "mass77889900"
 }
 
 resource "aws_iam_user" "seven" {
-name = "rahamuser11" 
+name = "rahamuser11420" 
 }
 
 resource "aws_ebs_volume" "eight" {
